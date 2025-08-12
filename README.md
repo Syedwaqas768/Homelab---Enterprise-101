@@ -78,7 +78,7 @@ Servers:
 
 ---
 
-##Attack Simulation — [guide](https://docs.projectsecurity.io/e101/cyberattacksimulation/)
+# Attack Simulation — [guide](https://docs.projectsecurity.io/e101/cyberattacksimulation/)
 - Recon by using Nmap service/port scan to find SSH/WinRM/RDP that were exposed
 - Initial access by Phishing credentials that were captured to MailHog and used them to SSH into the corporate server
 - Lateral movement by Password spray over WinRM, then Evil-WinRM shell into the Windows client where I pivot to the Domain Controller via RDP
