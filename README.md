@@ -197,6 +197,3 @@ defensive and offensive tools during the attack simulation.
 8. Attack simulation: https://docs.projectsecurity.io/e101/cyberattacksimulation/
 
 9. Tool guides: Wazuh https://docs.projectsecurity.io/e101/toolguide/setupwazuh/ • MailHog https://docs.projectsecurity.io/e101/toolguide/setupmailhog/
-
-
-
