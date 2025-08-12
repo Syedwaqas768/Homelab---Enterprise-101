@@ -1,4 +1,4 @@
-#Homelab---Enterprise-101
+# Homelab---Enterprise-101
 Homelab project built by following Enterprise 101 guide. Configured Active Directory, Wazuh (SIEM), MailHog for simulated enterprise defense, and simulation attacks for offense, with troubleshooting and documentation.
 
 ---
@@ -16,7 +16,7 @@ Homelab project built by following Enterprise 101 guide. Configured Active Direc
 
 ---
 
-#VirtualBox NAT: `Project-1-nat` (10.0.0.0/24), DHCP scope 10.0.0.100–10.0.0.200
+# VirtualBox NAT: `Project-1-nat` (10.0.0.0/24), DHCP scope 10.0.0.100–10.0.0.200
 
 ---
 
@@ -26,7 +26,7 @@ Offensive: Nmap, Hydra, NetExec, Evil-WinRM, xfreerdp, SecLists
 
 ---
 
-#Provisioning + Configurations + how I verified
+# Provisioning + Configurations + how I verified
 
 Workstations: 
 1. Windows 11 (project-1-win) — [setup guide](https://docs.projectsecurity.io/e101/setupwindows/#connect-windows-11-enterprise-project-x-win-client-to-windows-domain-controller)
@@ -70,7 +70,7 @@ Servers:
 
 ---
 
-#Creating Vulnerable Environment — [guide](https://docs.projectsecurity.io/e101/configurevulnenv/)
+##Creating Vulnerable Environment — [guide](https://docs.projectsecurity.io/e101/configurevulnenv/)
 - Enabled RDP/WinRM/SSH and a basic SMB share to create an attack surface
 - Configured account lockout and simple password policy to allow spraying attacks
 - Installed and enrolled Wazuh agent for each host and added FIM to detect changes on a file named `secret.txt`
@@ -78,7 +78,7 @@ Servers:
 
 ---
 
-#Attack Simulation — [guide](https://docs.projectsecurity.io/e101/cyberattacksimulation/)
+##Attack Simulation — [guide](https://docs.projectsecurity.io/e101/cyberattacksimulation/)
 - Recon by using Nmap service/port scan to find SSH/WinRM/RDP that were exposed
 - Initial access by Phishing credentials that were captured to MailHog and used them to SSH into the corporate server
 - Lateral movement by Password spray over WinRM, then Evil-WinRM shell into the Windows client where I pivot to the Domain Controller via RDP
@@ -88,21 +88,21 @@ Servers:
 
 ---
 
-#Detections Implemented (Wazuh)
+# Detections Implemented (Wazuh)
 - SSH authentication failures → (rule 5760 / MITRE T1110.001)
 - WinRM logon activity → searchable in `wazuh-alerts-*`
 - File Integrity Monitoring → `secret.txt` 
 
 ---
 
-#Results of Attack Simulation
+# Results of Attack Simulation
 - 3 agents reporting (Win11, Win Server 2025, Ubuntu) to Wazuh  
 - SSH auth-fail detections (rule 5760 / MITRE T1110.001)  
 - FIM alert triggered on `secret.txt` after modification
 
 ---
 
-#Evidence
+# Evidence
 - SSH auth-fail detected (rule 5760, MITRE T1110.001)
 <img width="926" height="643" alt="alert-detail rule-5760" src="https://github.com/user-attachments/assets/76abba69-e9f9-4e54-8222-cf0de270080a" />
 
@@ -114,7 +114,7 @@ Servers:
 
 ---
 
-#Challenges and Troubleshooting:
+# Challenges and Troubleshooting:
 1. NAT Network Boot Delays and Login Freezes on Linux Servers:
 VMs were black screening or became frozen forever on the login screen and/or on NAT
 Network. I tried troubleshooting with different adapters by checking enp0s3 and enp0s8,
@@ -149,7 +149,7 @@ network fixes the phishing email hit the inbox.
 
 ---
 
-#Lessons learned:
+# Lessons learned:
 While following the step by step guide for this homelab this was one of the most valuable
 experiences where I learned so many things. Setting up and provisioning multiple workstations
 and servers where I had to implement Active Directory, email services, Wazuh SIEM, and even
@@ -179,7 +179,7 @@ defensive and offensive tools during the attack simulation.
 
 ---
 
-References (public docs I followed)
+# References (public docs I followed)
 1. AD build: https://docs.projectsecurity.io/e101/buildingad/
 
 2. Windows client: https://docs.projectsecurity.io/e101/setupwindows/
