@@ -3,7 +3,7 @@ Homelab project built by following Enterprise 101 guide. Configured Active Direc
 
 ---
 
-#Topology
+# Topology
 | Hostname           | IP         | OS                     | Role |
 |--------------------|------------|------------------------|-------------------------------|
 | project-1-dc       | 10.0.0.5   | Windows Server 2025    | AD DS / DNS / DHCP / SSO      |
