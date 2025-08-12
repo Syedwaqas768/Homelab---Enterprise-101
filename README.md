@@ -54,7 +54,7 @@ Servers:
 1. Domain Controller (Windows Server 2025) — [building AD](https://docs.projectsecurity.io/e101/buildingad/)
 - Set up as CORP.PROJECT1-DC.COM alongside DNS/DHCP
 - Creation of OUs for Users/Computers/Servers
-- Install & enrolled server to Wazuh in project-1-sec-box (10.0.0.10)
+- Installed & enrolled server to Wazuh in project-1-sec-box (10.0.0.10)
 - Verified: ADUC shows joined hosts; Event IDs 4624/4625/4688 present
 
 2. Corporate Server (project-1-admin) — [setup](https://docs.projectsecurity.io/e101/setupcorporateserver/)
@@ -70,7 +70,7 @@ Servers:
 
 ---
 
-##Creating Vulnerable Environment — [guide](https://docs.projectsecurity.io/e101/configurevulnenv/)
+# Creating Vulnerable Environment — [guide](https://docs.projectsecurity.io/e101/configurevulnenv/)
 - Enabled RDP/WinRM/SSH and a basic SMB share to create an attack surface
 - Configured account lockout and simple password policy to allow spraying attacks
 - Installed and enrolled Wazuh agent for each host and added FIM to detect changes on a file named `secret.txt`
@@ -80,7 +80,7 @@ Servers:
 
 # Attack Simulation — [guide](https://docs.projectsecurity.io/e101/cyberattacksimulation/)
 - Recon by using Nmap service/port scan to find SSH/WinRM/RDP that were exposed
-- Initial access by Phishing credentials that were captured to MailHog and used them to SSH into the corporate server
+- Initial access by Phishing credentials that were captured to MailHog and used them to SSH'd into the corporate server
 - Lateral movement by Password spray over WinRM, then Evil-WinRM shell into the Windows client where I pivot to the Domain Controller via RDP
 - Exfiltration: Copied a file titled `secret.txt` off the Domain Controller
 - Persistence by adding a local admin and a scheduled task that triggers a reverse shell
