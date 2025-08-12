@@ -179,7 +179,7 @@ defensive and offensive tools during the attack simulation.
 
 ---
 
-# References (public docs I followed)
+# References (Guide I followed by Grant Collins)
 1. AD build: https://docs.projectsecurity.io/e101/buildingad/
 
 2. Windows client: https://docs.projectsecurity.io/e101/setupwindows/
