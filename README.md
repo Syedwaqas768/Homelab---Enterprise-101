@@ -109,7 +109,7 @@ Servers:
 - 3 agents active; events flowing to Wazuh.
 <img width="1179" height="550" alt="wazuh-overview-3-agents" src="https://github.com/user-attachments/assets/57fe661f-34d6-4c87-9c7a-7f86de5ffd7d" />
 
-- Windows security events indexed in `wazuh-alerts-*`.
+- Windows security events indexed in `wazuh-alerts-`.
 <img width="1203" height="650" alt="discover-raw-event" src="https://github.com/user-attachments/assets/e95477d1-b763-4226-8866-1fdb4a7f9786" />
 
 ---
