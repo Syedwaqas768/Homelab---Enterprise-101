@@ -90,7 +90,7 @@ Servers:
 
 # Detections Implemented (Wazuh)
 - SSH authentication failures → (rule 5760 / MITRE T1110.001)
-- WinRM logon activity → searchable in `wazuh-alerts-*`
+- WinRM logon activity → searchable in `wazuh-alerts`
 - File Integrity Monitoring → `secret.txt` 
 
 ---
