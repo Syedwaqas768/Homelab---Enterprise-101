@@ -10,7 +10,7 @@ Homelab project built by following Enterprise 101 guide. Configured Active Direc
 | project-1-win      | 10.0.0.100 | Windows 11 Enterprise  | Windows workstation           |
 | project-1-linux    | 10.0.0.8   | Ubuntu 22.04           | Linux workstation             |
 | project-1-admin    | 10.0.0.101 | Ubuntu 22.04 Desktop   | Corporate server (apps/files) |
-| project-1-sec-work | 10.0.0.103 | Security Onion (opt.)  | Security workstation          |
+| project-1-sec-work | 10.0.0.103 | Security Onion         | Security workstation          |
 | project-1-sec-box  | 10.0.0.10  | Ubuntu 22.04           | Wazuh manager + dashboard     |
 | attacker           | DHCP       | Kali 2024.2            | Attack box                    |
 
