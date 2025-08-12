@@ -20,7 +20,7 @@ Homelab project built by following Enterprise 101 guide. Configured Active Direc
 
 ---
 
-#Tooling
+# Tools
 Defensive: Active Directory, Wazuh, MailHog  
 Offensive: Nmap, Hydra, NetExec, Evil-WinRM, xfreerdp, SecLists
 
